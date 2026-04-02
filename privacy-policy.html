@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Animana Notes AI</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Georgia', serif;
+      background: #f8f7f4;
+      color: #1a1714;
+      line-height: 1.75;
+      padding: 48px 24px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: #234830;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-icon svg { color: white; }
+    .logo-text h1 { font-size: 20px; font-weight: 700; color: #1a1714; }
+    .logo-text p  { font-size: 13px; color: #7a7369; }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1714;
+      margin-bottom: 8px;
+    }
+    .updated {
+      font-size: 13px;
+      color: #7a7369;
+      margin-bottom: 36px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a1714;
+      margin: 32px 0 8px;
+    }
+    p { margin-bottom: 14px; font-size: 15px; color: #2a2724; }
+    ul { margin: 8px 0 14px 20px; }
+    li { font-size: 15px; color: #2a2724; margin-bottom: 6px; }
+    .highlight {
+      background: #e8f2eb;
+      border-left: 3px solid #234830;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+    .contact {
+      margin-top: 40px;
+      padding: 20px;
+      background: white;
+      border: 1px solid #e2ddd7;
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #e2ddd7;
+      font-size: 13px;
+      color: #7a7369;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="logo">
+    <div class="logo-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <h1>Animana Notes AI</h1>
+      <p>Chrome Extension</p>
+    </div>
+  </div>
+
+  <h2>Privacy Policy</h2>
+  <p class="updated">Last updated: April 2026</p>
+
+  <div class="highlight">
+    <strong>Summary:</strong> Animana Notes AI stores your API key and templates locally on your device only. It reads patient data from the Animana page you have open. It sends consultation notes and patient data to Anthropic's API to generate text. No data is sent to any other server. No data is collected by the extension developer.
+  </div>
+
+  <h3>1. What data the extension accesses</h3>
+  <p>Animana Notes AI reads the following information from the IDEXX Animana page you have open in your browser:</p>
+  <ul>
+    <li>Patient name, species, breed, sex, age, and weight</li>
+    <li>Microchip number and passport number</li>
+    <li>Client name and CPH number</li>
+    <li>Clinical history entries visible on the patient history page</li>
+  </ul>
+  <p>This data is read directly from the web page you are already viewing — the extension does not access any Animana API, database, or server independently.</p>
+
+  <h3>2. What data is sent to third parties</h3>
+  <p>When you click <strong>Generate</strong> or <strong>Summarise</strong>, the extension sends the following to the Anthropic API (<a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com</a>):</p>
+  <ul>
+    <li>The patient information scraped from the current Animana page</li>
+    <li>The consultation notes you typed into the extension</li>
+    <li>Patient history entries from the current page</li>
+  </ul>
+  <p>This data is sent to Anthropic solely to generate the SOAP note text. Please refer to <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic's Privacy Policy</a> for how they handle API request data. Anthropic does not use API request data to train models by default.</p>
+  <p><strong>No data is sent to the extension developer or any other third party.</strong></p>
+
+  <h3>3. What data is stored locally</h3>
+  <p>The extension stores the following in your browser's local storage (<code>chrome.storage.local</code>), which remains on your device only:</p>
+  <ul>
+    <li>Your Anthropic API key</li>
+    <li>Custom consultation note templates you create</li>
+    <li>Your custom AI system prompt (if set)</li>
+  </ul>
+  <p>This data never leaves your device except as described in Section 2 above (your API key is used to authenticate requests to Anthropic's API).</p>
+
+  <h3>4. Patient data and clinical confidentiality</h3>
+  <p>You are responsible for ensuring your use of this extension complies with applicable data protection laws (including GDPR where applicable) and your clinic's data handling policies. Patient data is sent to Anthropic's API when you generate notes — you should ensure this is consistent with your practice's agreements and obligations.</p>
+  <p>The extension developer is a sole user of this tool and does not receive, store, or process any patient data.</p>
+
+  <h3>5. Permissions used</h3>
+  <p>The extension requests the following Chrome permissions:</p>
+  <ul>
+    <li><strong>activeTab / scripting</strong> — to read patient data from the Animana page you have open and to fill the consult form fields</li>
+    <li><strong>storage</strong> — to save your API key and templates locally on your device</li>
+    <li><strong>tabs / webNavigation</strong> — to detect which Animana page is open and navigate to the consult form</li>
+    <li><strong>Host permission for animana.com</strong> — to access the Animana pages you are logged into</li>
+    <li><strong>Host permission for api.anthropic.com</strong> — to send requests to the Anthropic API for note generation</li>
+  </ul>
+
+  <h3>6. Data retention</h3>
+  <p>The extension does not retain any data beyond your current browser session, except for the items stored locally (API key, templates, system prompt) which persist until you clear them or uninstall the extension.</p>
+
+  <h3>7. Changes to this policy</h3>
+  <p>If this policy changes, the updated version will be posted at this URL. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+
+  <div class="contact">
+    <h3 style="margin-top:0;">8. Contact</h3>
+    <p style="margin-bottom:0;">This extension is developed and maintained for personal use by Dr. Michael Rissik. For questions about this privacy policy, contact: <strong>mdrissik@gmail.com</strong></p>
+  </div>
+
+  <footer>
+    <p>Animana Notes AI is an independent tool and is not affiliated with, endorsed by, or officially connected to IDEXX Laboratories or IDEXX Animana.</p>
+  </footer>
+
+</div>
+</body>
+</html>
