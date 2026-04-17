@@ -1,0 +1,17 @@
+{
+  "addons": {
+    "animana-notes-ai@rissik.vet": {
+      "updates": [
+        {
+          "version": "2.1.0",
+          "update_link": "https://raw.githubusercontent.com/mdrissik/animana-notes/main/animana-notes-ai-firefox.zip",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "109.0"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
